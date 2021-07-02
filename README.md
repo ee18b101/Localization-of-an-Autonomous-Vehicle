@@ -11,7 +11,7 @@ The UKF addresses the approximation issues of the EKF. The state distribution is
 
 Here I used the Unscented Kalman Filter package provided by [filterpy](https://filterpy.readthedocs.io/en/latest/kalman/UnscentedKalmanFilter.html) as a base to implement the localization module.
 
-## Working of Module
+## Module
 
 ### Input and Output
 The module gets the following data as it's sensor input:
@@ -27,10 +27,22 @@ The module then uses this input to predict the state of the vehicle which is a 9
 - Velocity X, Y, Z
 - Yaw, Pitch and Roll
 
-### Working
-- First the GPS data is converted into the relative frame of the track.
-- Then each of the sensor data gets assigned a covariance matrix depending upon how relaible the sensor data is.
-- Then the Unscented Kalman Filter is used along with a set of update steps which convert the sensor data into the state of the vehicle.
-- The state of the vehicle versus the actual state is then plotted.
-
 ### Results
+Seen below are the actual versus estimated state of the vehicle.
+![3D Position](./Results/Pos_3D.png)
+![Pos X](./Results/Pos_x.png)
+![Pos Y](./Results/Pos_y.png)
+![Pos Z](./Results/Pos_z.png)
+![Vel X](./Results/Vel_x.png)
+![Vel Y](./Results/Vel_y.png)
+![Vel Z](./Results/Vel_z.png)
+![Yaw](./Results/Yaw.png)
+![Pitch](./Results/Pitch.png)
+![Roll](./Results/Roll.png)
+
+As seen above the localization moule very accurately preditcs the state of the vehicle.
+
+## Usage
+- `GPS.csv` contains the sennsor data and the real data. Replace this incase you want to use your own data for this module
+- To install all dependencies run `pip install -r requirements.txt`
+- To run the main module: `python USEKF.py`
