@@ -1,8 +1,11 @@
 # Localization || Autonomous Vehicle
-This project implements Unscented Kalman Filter for localization of an Autonomous Vehicle given sensors GPS and IMU. This project was initially developed for the competition Indy Autonomous Competition in which I participated under the Team Abhiyaan from IIT Madras. The example data given here is extracted from a simulation of the vehicle performing a lap around the track.
+This project implements Unscented Kalman Filter for localization of an Autonomous Vehicle given sensors GPS and IMU. This project was initially developed for the competition Indy Autonomous Competition in which I participated under the Team Abhiyaan from IIT Madras. The example data given here is extracted from a simulation of the vehicle performing a lap around the track. 
+
+The localization module can predict the **position** of the vehicle within an error of **2.3 meters** and the **orientation** of the vehicle within an error of **0.01 rad**.
+
 
 ## Localization
-In a self-driving car car, GPS (Global Positioning Systems) use trilateration to locate our position. In these measurements, there may be an error from 1 to 10 meters. This error is too important and can potentially be fatal for the passengers or the environment of the autonomous vehicle. We therefore include a step called **localization**.
+In a self-driving car car, GPS (Global Positioning Systems) use trilateration to locate our position. In these measurements, there may be an error of 10 meters. This error is too important and can potentially be fatal for the passengers or the environment of the autonomous vehicle. We therefore include a step called **localization**.
 
 Localization is a step implemented in the majority of robots and vehicles to locate with a really small margin of error. If we want to make decisions like overtaking a vehicle or simply defining a route, we need to know what’s around us (sensor fusion) and where we are (localization). Only with this information we can define a trajectory.
 
