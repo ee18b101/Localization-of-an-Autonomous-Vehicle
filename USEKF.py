@@ -38,8 +38,8 @@ def convert_ground_frame(x, theta):
 
 
 # transform rel_pos to GPS frame
-transform = np.array([[85787.7484144, 7397939.61266],
-			[110979.170252,-4418059.86805],
+transform = np.array([[85787.7444144, 7397932.81266],
+			[110979.170252,-4418056.86805],
 			[1, 0]])
 
 GPS[:,0] = GPS[:,0]*transform[0,0] + transform[0,1]
