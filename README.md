@@ -1,7 +1,7 @@
 # Localization || Autonomous Vehicle
 This project implements Unscented Kalman Filter for localization of an Autonomous Vehicle given sensors GPS and IMU. This project was initially developed for the competition Indy Autonomous Competition in which I participated under the Team Abhiyaan from IIT Madras. The example data given here is extracted from a simulation of the vehicle performing a lap around the track. 
 
-The localization module can predict the **position** of the vehicle within an error of **2.3 meters** and the **orientation** of the vehicle within an error of **0.01 radians**.
+Given an sensor error rate of over **6 meters** (GPS in this case) the localization module can predict the **position** of the vehicle within an error of **2.3 meters** and the **orientation** of the vehicle within an error of **0.01 radians**. The module built here is just a framework for using Unscented Kalman Filter and can be coupled with other data too.
 
 
 ## Localization
